@@ -1,0 +1,108 @@
+-- phpMyAdmin SQL Dump
+-- version 2.6.0-rc2
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Jan 11, 2005 at 12:28 PM
+-- Server version: 4.1.3
+-- PHP Version: 4.3.4
+-- 
+-- Database: `myCampaignManager`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `cm_campaign_articles`
+-- 
+
+CREATE TABLE `cm_campaign_articles` (
+  `campaign_article_id` int(10) unsigned NOT NULL auto_increment,
+  `campaign_id` int(11) NOT NULL default '0',
+  `campaign_article_title` varchar(100) NOT NULL default '',
+  `campaign_article_text` text NOT NULL,
+  `campaign_article_sort_order` tinyint(3) unsigned NOT NULL default '0',
+  `campaign_article_type` enum('Header','Normal','Footer') NOT NULL default 'Header',
+  `campaign_article_image` text NOT NULL,
+  `campaign_article_toc` tinyint(4) NOT NULL default '1',
+  PRIMARY KEY  (`campaign_article_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 ;
+
+-- 
+-- Dumping data for table `cm_campaign_articles`
+-- 
+
+INSERT INTO `cm_campaign_articles` VALUES (1, 1, 'Finally... Email Newsletters Made Easy!', 'myCampaignManager is a template-based email newsletter content management system, capable of publishing email campaigns through virtually any mailing list manager.  It is written in PHP, using a mySQL backend, and is OPEN SOURCE and 100% FREE!!!', 0, 'Header', '', 0);
+INSERT INTO `cm_campaign_articles` VALUES (2, 1, 'Background', 'Authors of email newsletters usually don''t know very much about HTML.  As a result, most email newsletters are written and published in plain-text format.  Enter myCampaignManager.  This system allows email newsletter authors to create multiple newsletter campaigns, add articles and images, preview, and publish the email newsletter - all using a easy to understand interface.\r\n\r\nmyCampaignManager works with virtually any mailing list manager.  When publishing an email campaign, the software simply sends a single email addressed from you, directly to the address you usually send your email campaigns to.\r\n\r\nmyCampaignManager does not require the user to know any HTML.  If you sign in to the system and look at the formatting on this particiular demo  article, you will notice that it is plain text with double line breaks in between paragraphs.  That''s it!\r\n\r\nFinally, email newsletters made easy!  That''s the power of myCampaignManager.', 1, 'Normal', '', 0);
+INSERT INTO `cm_campaign_articles` VALUES (3, 1, 'Getting myCampaignManager', 'If you are a web administrator and would like to download and install the myCampaignManager software on your website, visit the following website for more information:\r\n<a href="http://mycampaign.sourceforge.net/">http://mycampaign.sourceforge.net/</a>\r\n\r\nFor a live demo of the software, visit:\r\n<a href="http://mycmdemo.imaginerc.com/">http://mycmdemo.imaginerc.com/</a>', 2, 'Normal', '', 0);
+INSERT INTO `cm_campaign_articles` VALUES (4, 1, 'Installing myCampaignManager', 'myCampaignManager requires PHP 4.3.0 or newer, a web server, and a MySQL database server.\r\n\r\n<b>Web Server Configuration</b>\r\nIncluded in the distribution is an htaccess file (.htaccess) that help correctly set the PHP include path and file upload limits.  You will need to ensure that your web server will allow options to be set in htaccess files.\r\n\r\n<b>Database Setup</b>\r\nYou may install the database schema in an existing database, or within a new database.  The schema for MySQL is included in the distribution (/doc/database.mysql).  To utilize this file, run the following command:\r\n<i>mysql -u root -p yourdatabasename < doc/database.mysql</i>\r\n\r\n<b>Configuration</b>\r\nA simple installation script is included to help you complete the configuration of the software.  You can access it via the web by pointing your web browser to http://your_server/path/to/myCampaignManager/install.php.  Before executing this script, you will want to ensure that the following directory permissions are set:\r\n- chmod 777 images/cm_thumbnails\r\n- chmod 777 .htaccess\r\n\r\nAfter successfully installing, be sure to change the file permissions on the htaccess file back to something more reasonable:\r\n- chmod 644 .htaccess\r\n\r\nIf you have any other problems, post a support request on the myCampaignManager SourceForge project page and someone will help you as soon as possible.', 50, 'Normal', '', 0);
+INSERT INTO `cm_campaign_articles` VALUES (5, 2, 'Quick Start', 'For those individuals who do not read software manuals, here is a quick-start overview.  Keep in mind that this is no replacement for reading this guide in its entirety.  Nevertheless, here are the steps to take to publish your first email campaign using myCampaignManager.\r\n\r\n<b>User Account</b> - The myCampaignManager administrator will need to add a user account that the new campaigns will be managed by.  The administrator will need to know:\r\n    - The user’s email address\r\n    - The user’s choice of password\r\n    - The user’s postal code (for lost password validation)\r\n    - The email address that the campaign will be published to (usually a Mailing List Manager)\r\n\r\n<b>Sign In</b> - The user enters their email address and password, then clicks on "Sign In" to begin managing campaigns.\r\n\r\n<b>Templates</b> - If you plan on using one of the standard included templates, you can skip this step.  Otherwise, click on the "Templates" link and then the "Add New" link.  Give your new template a title and make sure that "<!—campaignContent-->" appears somewhere within the template code.\r\n\r\n<b>Campaigns</b> - Click on the "Campaigns" link, then the "Add New" link to create a new campaign.  Select the name of the template you want to use, give the new campaign a name, and click on "Save".\r\n\r\n<b>Articles</b> - Add a new article to the campaign by clicking on the "Add New Article" link.  Give the article a title, some body text, set the article type to "Normal", give it a sort order (10 will work just fine).  Click on "Save" when you have finished.\r\n\r\n<b>Preview</b> - Click on the "Preview Campaign" link to see what your email campaign will look like when it is sent out.\r\n\r\n<b>Publish</b> - Once you are satisfied with the results, click on the "Publish Campaign" link to send an email copy of it to the email address specified in the user’s account settings.', 10, 'Normal', '', 1);
+INSERT INTO `cm_campaign_articles` VALUES (6, 2, 'Creating Templates', 'Each email campaign is assigned a template, so before creating a new campaign, you must ensure that you have an appropriate template for publishing a campaign.  The campaign templates are actually simple web pages.  A basic web editor can help you create your first template, or you can use one of the stock templates and modify it to fit your requirements.\r\n\r\nRemember that when you are referencing external images or web pages, you will need to include the full URL to the resource.  Template images will need to be uploaded to and hosted on another web server.\r\n\r\nThere is only one specific requirement to remember while creating a template for your next campaign.  You somehow have to tell myCampaignManager where you want the campaign content to be positioned inside of the template.  This can be done using a special tag.  At the position within the HTML code where you want the articles to appear, insert the tag: &lt;!—campaignContent--&gt;\r\n\r\nOptionally, you may want to add a table of contents to your template, complete with links to the various articles in the campaign (and possibly even "back to top" links).  Since the table of contents is based on the articles you add to your campaign, it makes most sense to generate the table of contents when the campaign is actually being published (or previewed).  To add a table of contents, locate the position in the HTML code where the table should appear and insert the tag: &lt;!--tableOfContents--&gt;\r\n\r\nAlternatively, you may place the &lt;!--tableOfContents--&gt; tag in a header article within the campaign itself.', 20, 'Normal', '', 1);
+INSERT INTO `cm_campaign_articles` VALUES (7, 2, 'Manage Campaigns', 'Clicking on the "Campaigns" link from any myCampaignManager screen brings you to the Campaign List screen.  From this screen you can add and delete campaigns.  Simply click on the "Add New Campaign" link to create a new campaign, or on the "Delete" link next the campaign you wish to delete.\r\n\r\nClicking on the "Edit" link next to a campaign in the Campaign List screen allows you to edit the content of the campaign, preview the articles, preview the entire campaign, and publish it.  Follow the instructions on the Campaign List screen.', 30, 'Normal', '', 1);
+INSERT INTO `cm_campaign_articles` VALUES (8, 2, 'Using Images', 'Clicking on the "Images" link from any myCampaignManager screen brings you to the Upload Images screen.  This tool allows you to upload images to the server for inclusion in articles and campaigns.  To add images, click on the "Browse" button within the file upload applet and locate the file(s) you wish to upload. You may select multiple files at once by using holding down the "SHIFT" or "CONTROL" keys while making your selection.  Click on the "Open" button to complete your selection of image files.  Once all the desired files are listed in the applet window, click on the "Upload" button.\r\n\r\nNote that there are a number of restrictions on uploading files.  \r\n     - Only image files will be accepted by the server.\r\n     - Large image files will be resized so that the length of their longest side is 200 pixels.\r\n     - Image files smaller than 200 pixels will not be resized.\r\n     - Images will automatically be removed from the server after three months with no warning.\r\n     - Maximum upload size per click of the "Upload" button is 25 MB.\r\n\r\nAfter uploading images, the files will be available to add to articles.  While adding an article, click on the "Insert an Image" button to select an image to include in the article.  Note that a special "tag" will be inserted at the end of the article text (regardless of where in the article text your cursor is).  This tag, if kept intact, may be moved anywhere within the article text.', 40, 'Normal', '', 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `cm_campaigns`
+-- 
+
+CREATE TABLE `cm_campaigns` (
+  `campaign_id` int(10) unsigned NOT NULL auto_increment,
+  `user_id` int(10) unsigned NOT NULL default '0',
+  `campaign_name` varchar(50) NOT NULL default '',
+  `template_id` int(10) unsigned NOT NULL default '0',
+  `campaign_create_date` date NOT NULL default '0000-00-00',
+  PRIMARY KEY  (`campaign_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 ;
+
+-- 
+-- Dumping data for table `cm_campaigns`
+-- 
+
+INSERT INTO `cm_campaigns` VALUES (1, 1, 'About myCampaignManager', 1, '2005-01-05');
+INSERT INTO `cm_campaigns` VALUES (2, 1, 'User Guide', 2, '2005-01-07');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `cm_templates`
+-- 
+
+CREATE TABLE `cm_templates` (
+  `template_id` int(10) unsigned NOT NULL auto_increment,
+  `user_id` int(10) unsigned NOT NULL default '0',
+  `template_title` varchar(50) NOT NULL default '',
+  `template_text` text NOT NULL,
+  PRIMARY KEY  (`template_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 ;
+
+-- 
+-- Dumping data for table `cm_templates`
+-- 
+
+INSERT INTO `cm_templates` VALUES (1, 1, 'Demo Template', '<html>\r\n<head>\r\n<title>myCampaignManager Newsletter</title>\r\n<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\r\n<style type="text/css" media="all">\r\n<!--\r\n\r\n/*\r\n * Required CSS Classes\r\n */\r\n\r\n/* Email title formatting */\r\n.tdEmailTitle {\r\n    font-family: Tahoma;\r\n    font-size: 20px;\r\n    font-weight: normal;\r\n    color: #666699;\r\n}\r\n\r\n/* Article title formatting */\r\n.tdArticleTitle {\r\n    font-family: Tahoma;\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    color: #666666;\r\n}\r\n\r\n/* Article text formatting */\r\n.tdBodyText {\r\n    font-size: 13px;\r\n    font-family: Verdana;\r\n    color: #000000;\r\n}\r\n\r\n/* Formatting for the Date line (in the header) */\r\n.tdDateText {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    font-family: Verdana;\r\n    color: #000000;\r\n}\r\n\r\n.tableSubTable {}\r\n\r\n/* Optional CSS Classes */\r\n\r\nbody {\r\n    background-color: #ffffff;\r\n    font-size: 13px;\r\n    font-family: Tahoma;\r\n    color: #000000;\r\n    margin: 0px;\r\n}\r\na {\r\n    font-weight: normal;\r\n    text-decoration: underline;\r\n    color: #000000;\r\n}\r\na:hover {\r\n    font-weight: normal;\r\n    text-decoration: underline;\r\n    color: #666699;\r\n}\r\n.menuLink {\r\n    font-weight:bold;\r\n    color: #000000;\r\n    text-decoration: none;\r\n}\r\n.menuLink:hover {\r\n    font-weight: bold;\r\n    color: #666666;\r\n    text-decoration: none;\r\n}\r\n.tdBannerBar {\r\n    background-color : #666699;\r\n}\r\n.tdFooterBar {\r\n    background-color: #dddddd;\r\n    border: #666699 dashed;\r\n    border-right-width: 0px;\r\n    border-left-width: 0px;\r\n    border-top-width: 1px;\r\n    border-bottom-width: 0px;\r\n}\r\n.tdOrangeBox {\r\n    background-color: #FCBE1E;\r\n}\r\n.tdTextBox {\r\n    background-color: #F4EEE2;\r\n}\r\ntd {\r\n    font-size: 13px;\r\n    font-family: Verdana;\r\n    color: #000000;\r\n}\r\n.sideBar {\r\n    background-color: #f0f0f0;\r\n    border: 1px #666699 dashed;\r\n    border-left: none;\r\n    border-top: none;\r\n    border-bottom: none;\r\n}\r\n-->\r\n</style>\r\n</head>\r\n<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">\r\n<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">\r\n  <tr>\r\n	<td class="tdBannerBar" height="75" width="100%"><img src="http://mycm.imaginerc.com/images/cm_templates/cm_logo.gif" height="75" width="291" /></td>\r\n\r\n  </tr>\r\n  <tr>\r\n    <td>\r\n      <table border="0" cellpadding="0" cellspacing="0" height="100%">\r\n        <tr>\r\n          <td width="150" class="sideBar" valign="top">\r\n            <table border="0" cellpadding="10">\r\n              <tr><td><img src="http://mycm.imaginerc.com/images/spacer.gif" height="1" width="130" /></td></tr>\r\n              <tr>\r\n\r\n                <td>\r\n            <b>What is it?</b><br /><br />\r\n            This is an example template for myCampaignManager.  Feel free to modify this design for your own email newsletter!<br /><br />\r\n\r\n                </td>\r\n              </tr>\r\n            </table>\r\n          </td>\r\n          <td valign="top">\r\n            <table border="0" cellpadding="10">\r\n              <tr>\r\n                <td>\r\n<!--campaignContent-->\r\n<br />\r\n                </td>\r\n              </tr>\r\n            </table>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n	<td class="tdFooterBar" height="35" width="100%" valign="top">\r\n	   <table border="0" cellpadding="10" width="100%">\r\n	     <tr>\r\n	       <td>\r\n	         <div align="left">\r\n	           <b>Copyright © 2005 Steven L. Brendtro</b><br />\r\n\r\n	         </div>\r\n	       </td>\r\n	       <td>\r\n	         <div align="right">\r\n	           <i>Website:</i> <a href="http://www.imaginerc.com" target="_blank">http://www.imaginerc.com</a><br />\r\n	           <i>Email:</i> admin at imaginerc dot com<br />\r\n\r\n	         </div>\r\n	       </td>\r\n	     </tr>\r\n	   </table>\r\n	</td>\r\n  </tr>\r\n</table>\r\n\r\n</body>\r\n</html>');
+INSERT INTO `cm_templates` VALUES (2, 1, 'User Guide Template', '<html>\r\n<head>\r\n<title>myCampaignManager Newsletter</title>\r\n<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\r\n<style type="text/css" media="all">\r\n<!--\r\n\r\n/*\r\n * Required CSS Classes\r\n */\r\n\r\n/* Email title formatting */\r\n.tdEmailTitle {\r\n    font-family: Tahoma;\r\n    font-size: 20px;\r\n    font-weight: normal;\r\n    color: #666699;\r\n}\r\n\r\n/* Article title formatting */\r\n.tdArticleTitle {\r\n    font-family: Tahoma;\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    color: #666666;\r\n}\r\n\r\n/* Article text formatting */\r\n.tdBodyText {\r\n    font-size: 13px;\r\n    font-family: Verdana;\r\n    color: #000000;\r\n}\r\n\r\n/* Formatting for the Date line (in the header) */\r\n.tdDateText {\r\n    font-size: 15px;\r\n    font-weight: bold;\r\n    font-family: Verdana;\r\n    color: #000000;\r\n}\r\n\r\n.tableSubTable {}\r\n\r\n/* Optional CSS Classes */\r\n\r\nbody {\r\n    background-color: #ffffff;\r\n    font-size: 13px;\r\n    font-family: Tahoma;\r\n    color: #000000;\r\n    margin: 0px;\r\n}\r\na {\r\n    font-weight: normal;\r\n    text-decoration: underline;\r\n    color: #000000;\r\n}\r\na:hover {\r\n    font-weight: normal;\r\n    text-decoration: underline;\r\n    color: #666699;\r\n}\r\n.menuLink {\r\n    font-weight:bold;\r\n    color: #000000;\r\n    text-decoration: none;\r\n}\r\n.menuLink:hover {\r\n    font-weight: bold;\r\n    color: #666666;\r\n    text-decoration: none;\r\n}\r\n.tdBannerBar {\r\n    background-color : #666699;\r\n}\r\n.tdFooterBar {\r\n    background-color: #dddddd;\r\n    border: #666699 dashed;\r\n    border-right-width: 0px;\r\n    border-left-width: 0px;\r\n    border-top-width: 1px;\r\n    border-bottom-width: 0px;\r\n}\r\n.tdOrangeBox {\r\n    background-color: #FCBE1E;\r\n}\r\n.tdTextBox {\r\n    background-color: #F4EEE2;\r\n}\r\ntd {\r\n    font-size: 13px;\r\n    font-family: Verdana;\r\n    color: #000000;\r\n}\r\n.sideBar {\r\n    background-color: #f0f0f0;\r\n    border: 1px #666699 dashed;\r\n    border-left: none;\r\n    border-top: none;\r\n    border-bottom: none;\r\n}\r\n-->\r\n</style>\r\n</head>\r\n<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">\r\n<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">\r\n  <tr>\r\n	<td class="tdBannerBar" height="75" width="100%"><img src="http://mycm.imaginerc.com/images/cm_templates/cm_logo.gif" height="75" width="291" /></td>\r\n\r\n  </tr>\r\n  <tr>\r\n    <td>\r\n      <table border="0" cellpadding="0" cellspacing="0" height="100%">\r\n        <tr>\r\n          <td width="150" class="sideBar" valign="top">\r\n            <table border="0" cellpadding="10">\r\n              <tr><td><img src="http://mycm.imaginerc.com/images/spacer.gif" height="1" width="130" /></td></tr>\r\n              <tr>\r\n\r\n                <td>\r\n                  <span class="tdArticleTitle">Table of Contents</span><br />\r\n<!--tableOfContents-->\r\n                </td>\r\n              </tr>\r\n            </table>\r\n          </td>\r\n          <td valign="top">\r\n            <table border="0" cellpadding="10">\r\n              <tr>\r\n                <td>\r\n<!--campaignContent-->\r\n<br />\r\n                </td>\r\n              </tr>\r\n            </table>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n\r\n    </td>\r\n  </tr>\r\n  <tr>\r\n	<td class="tdFooterBar" height="35" width="100%" valign="top">\r\n	   <table border="0" cellpadding="10" width="100%">\r\n	     <tr>\r\n	       <td>\r\n	         <div align="left">\r\n	           <b>Copyright © 2005 Steven L. Brendtro</b><br />\r\n\r\n	         </div>\r\n	       </td>\r\n	       <td>\r\n	         <div align="right">\r\n	           <i>Website:</i> <a href="http://www.imaginerc.com" target="_blank">http://www.imaginerc.com</a><br />\r\n	           <i>Email:</i> admin at imaginerc dot com<br />\r\n\r\n	         </div>\r\n	       </td>\r\n	     </tr>\r\n	   </table>\r\n	</td>\r\n  </tr>\r\n</table>\r\n\r\n</body>\r\n</html>');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `cm_users`
+-- 
+
+CREATE TABLE `cm_users` (
+  `user_id` mediumint(9) NOT NULL auto_increment,
+  `user_email` varchar(255) NOT NULL default '',
+  `user_passwd` varchar(32) NOT NULL default '',
+  `user_mailing_list` varchar(255) NOT NULL default '',
+  `user_zip` varchar(10) NOT NULL default '',
+  `user_admin` tinyint(4) NOT NULL default '0',
+  PRIMARY KEY  (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 ;
+
+-- 
+-- Dumping data for table `cm_users`
+-- 
+
+INSERT INTO `cm_users` VALUES (1, 'admin@localhost', md5('password'), 'root@localhost', '00000', 1);
+        

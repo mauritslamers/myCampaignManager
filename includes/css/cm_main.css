@@ -1,0 +1,139 @@
+.tableListing {
+  padding : 0px;
+}
+.trListingHeader {
+}
+.tdListingHeader {
+  border-style : solid;
+  border-color : #808080;
+  border-width : 1px;
+  background-color: #B7B7B7;
+  padding: 2px;
+  height: 19px;
+}
+.trListingBody {
+}
+.tdListingBody {
+  border-style : solid;
+  border-color : #808080;
+  border-width : 1px;
+  border-top: 0px;
+  padding: 2px;
+  height: 19px;
+}
+.textPageTitle {
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: normal;
+    color: #666699;
+}
+.textPageSubTitle {
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666666;
+}
+.menuLink {
+    font-weight:bold;
+    color: #000000;
+    text-decoration: none;
+}
+.menuLink:hover {
+    font-weight: bold;
+    color: #666666;
+    text-decoration: none;
+}
+a {
+    font-weight: normal;
+    text-decoration: underline;
+    color: #000000;
+}
+a:hover {
+    font-weight: normal;
+    text-decoration: underline;
+    color: #666699;
+}
+
+/* End RCO Specific */
+
+body {
+    background-color: #ffffff;
+    font-size: 11px;
+    font-family: Tahoma;
+    color: #000000;
+    margin: 0px;
+}
+.tdBlackBar {
+    background-color : #000000;
+}
+.tdWhiteBar {
+    background-color : #ffffff;
+}
+.tdRedBar {
+    background-color : #831910;
+}
+.tdBannerBar {
+    background-color : #666699;
+}
+.tdFooterBar {
+    background-color: #dddddd;
+/*    border: #666699 solid; */
+    border: #666699 dashed;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 1px;
+    border-bottom-width: 0px;
+}
+.tdBlueBar {
+    background-color: #6BA3BD;
+}
+.tdOrangeBox {
+    background-color: #FCBE1E;
+}
+.tdTextBox {
+    background-color: #F4EEE2;
+}
+.inputText {
+	font-size: 11px;
+	font-family: Verdana;
+	color: #515D4F;
+	background-color: #ffffff;
+        border: 1px #30648C solid; 
+	margin-top: 0px; 
+	margin-right: 0px; 
+	margin-bottom: 0px; 
+	margin-left: 0px; 
+	padding-top: 2px; 
+	padding-right: 2px; 
+	padding-bottom: 2px; 
+	padding-left: 2px; 
+	height: 20px;
+}
+textarea,select {
+	font-size: 11px;
+	font-family: Verdana;
+	color: #515D4F;
+	background-color: #ffffff;
+        border: 1px #30648C solid; 
+	margin-top: 0px; 
+	margin-right: 0px; 
+	margin-bottom: 0px; 
+	margin-left: 0px; 
+	padding-top: 2px; 
+	padding-right: 0px; 
+	padding-bottom: 2px; 
+	padding-left: 4px; 
+}
+td {
+    font-size: 11px;
+    font-family: Verdana;
+    color: #000000;
+}
+.sideBar {
+    background-color: #f0f0f0;
+/*    border: 1px #666699 solid; */
+    border: 1px #666699 dashed;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}

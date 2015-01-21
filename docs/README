@@ -1,0 +1,18 @@
+README FILE
+
+Two Step Install for myCampaignManager:
+
+1.  Read index.html in the docs/ directory.
+2.  Do what it says.
+
+TROUBLESHOOTING
+
+1.  When using install.php, make sure the URL and the install path
+    both end with a slash '/'.  For some reason at the time of this
+    release, there was inconsistency in automatically adding the
+    slash.
+
+2.  Since this is the first release, if you have any problems that
+    you can't solve, please open a trouble ticket on the SourceForge
+    project page.
+    

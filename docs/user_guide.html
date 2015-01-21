@@ -1,0 +1,306 @@
+<html>
+<head>
+<title>myCampaignManager - User Guide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css" media="all">
+<!--
+
+/*
+ * Required CSS Classes
+ */
+
+/* Email title formatting */
+.tdEmailTitle {
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: normal;
+    color: #666699;
+}
+
+/* Article title formatting */
+.tdArticleTitle {
+    font-family: Tahoma;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666666;
+}
+
+/* Article text formatting */
+.tdBodyText {
+    font-size: 13px;
+    font-family: Verdana;
+    color: #000000;
+}
+
+/* Formatting for the Date line (in the header) */
+.tdDateText {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Verdana;
+    color: #000000;
+}
+
+.tableSubTable {}
+
+/* Optional CSS Classes */
+
+body {
+    background-color: #ffffff;
+    font-size: 13px;
+    font-family: Tahoma;
+    color: #000000;
+    margin: 0px;
+}
+a {
+    font-weight: normal;
+    text-decoration: underline;
+    color: #000000;
+}
+a:hover {
+    font-weight: normal;
+    text-decoration: underline;
+    color: #666699;
+}
+.menuLink {
+    font-weight:bold;
+    color: #000000;
+    text-decoration: none;
+}
+.menuLink:hover {
+    font-weight: bold;
+    color: #666666;
+    text-decoration: none;
+}
+.tdBannerBar {
+    background-color : #666699;
+}
+.tdFooterBar {
+    background-color: #dddddd;
+    border: #666699 dashed;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 1px;
+    border-bottom-width: 0px;
+}
+.tdOrangeBox {
+    background-color: #FCBE1E;
+}
+.tdTextBox {
+    background-color: #F4EEE2;
+}
+td {
+    font-size: 13px;
+    font-family: Verdana;
+    color: #000000;
+}
+.sideBar {
+    background-color: #f0f0f0;
+    border: 1px #666699 dashed;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+-->
+</style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+  <tr>
+
+	<td class="tdBannerBar" height="75" width="100%"><img src="../images/cm_templates/cm_logo.gif" height="75" width="291" /></td>
+
+  </tr>
+  <tr>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" height="100%">
+        <tr>
+          <td width="150" class="sideBar" valign="top">
+            <table border="0" cellpadding="10">
+
+              <tr><td><img src="../images/spacer.gif" height="1" width="130" /></td></tr>
+              <tr>
+
+                <td>
+                  <span class="tdArticleTitle">Table of Contents</span><br />
+
+<a href="#30">Quick Start</a><br />
+
+<a href="#33">Creating Templates</a><br />
+
+<a href="#35">Manage Campaigns</a><br />
+
+<a href="#34">Using Images</a><br />
+
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td valign="top">
+            <table border="0" cellpadding="10">
+
+              <tr>
+                <td>
+<a name="top"></a>
+            <a name="30"></a>
+            <table class="tableSubTable" width="100%">
+              <tr>
+                <td class="tdArticleTitle">Quick Start</td>
+              </tr>
+              <tr>
+
+                <td class="tdBodyText">
+                  For those individuals who do not read software manuals, here is a quick-start overview.  Keep in mind that this is no replacement for reading this guide in its entirety.  Nevertheless, here are the steps to take to publish your first email campaign using myCampaignManager.
+<br />
+<br />
+<b>User Account</b> - The myCampaignManager administrator will need to add a user account that the new campaigns will be managed by.  The administrator will need to know:
+<br />
+    - The user�s email address
+<br />
+    - The user�s choice of password
+<br />
+    - The user�s postal code (for lost password validation)
+
+<br />
+    - The email address that the campaign will be published to (usually a Mailing List Manager)
+<br />
+<br />
+<b>Sign In</b> � The user enters their email address and password, then clicks on "Sign In" to begin managing campaigns.
+<br />
+<br />
+<b>Templates</b> � If you plan on using one of the standard included templates, you can skip this step.  Otherwise, click on the "Templates" link and then the "Add New" link.  Give your new template a title and make sure that "<!�campaignContent-->" appears somewhere within the template code.
+<br />
+<br />
+<b>Campaigns</b> � Click on the "Campaigns" link, then the "Add New" link to create a new campaign.  Select the name of the template you want to use, give the new campaign a name, and click on "Save".
+
+<br />
+<br />
+<b>Articles</b> � Add a new article to the campaign by clicking on the "Add New Article" link.  Give the article a title, some body text, set the article type to "Normal", give it a sort order (10 will work just fine).  Click on "Save" when you have finished.
+<br />
+<br />
+<b>Preview</b> � Click on the "Preview Campaign" link to see what your email campaign will look like when it is sent out.
+<br />
+<br />
+<b>Publish</b> � Once you are satisfied with the results, click on the "Publish Campaign" link to send an email copy of it to the email address specified in the user�s account settings.
+<br />              <a href="#top">Back to Top</a><br />
+
+                </td>
+              </tr>
+            </table>
+<br /><br />
+            <a name="33"></a>
+            <table class="tableSubTable" width="100%">
+              <tr>
+                <td class="tdArticleTitle">Creating Templates</td>
+              </tr>
+
+              <tr>
+                <td class="tdBodyText">
+                  Each email campaign is assigned a template, so before creating a new campaign, you must ensure that you have an appropriate template for publishing a campaign.  The campaign templates are actually simple web pages.  A basic web editor can help you create your first template, or you can use one of the stock templates and modify it to fit your requirements.
+<br />
+<br />
+Remember that when you are referencing external images or web pages, you will need to include the full URL to the resource.  Template images will need to be uploaded to and hosted on another web server.
+<br />
+<br />
+There is only one specific requirement to remember while creating a template for your next campaign.  You somehow have to tell myCampaignManager where you want the campaign content to be positioned inside of the template.  This can be done using a special tag.  At the position within the HTML code where you want the articles to appear, insert the tag: &lt;!�campaignContent--&gt;
+<br />
+<br />
+Optionally, you may want to add a table of contents to your template, complete with links to the various articles in the campaign (and possibly even "back to top" links).  Since the table of contents is based on the articles you add to your campaign, it makes most sense to generate the table of contents when the campaign is actually being published (or previewed).  To add a table of contents, locate the position in the HTML code where the table should appear and insert the tag: &lt;!--tableOfContents--&gt;
+
+<br />
+<br />
+Alternatively, you may place the &lt;!--tableOfContents--&gt; tag in a header article within the campaign itself.
+<br />              <a href="#top">Back to Top</a><br />
+                </td>
+              </tr>
+            </table>
+<br /><br />
+            <a name="35"></a>
+
+            <table class="tableSubTable" width="100%">
+              <tr>
+                <td class="tdArticleTitle">Manage Campaigns</td>
+              </tr>
+              <tr>
+                <td class="tdBodyText">
+                  Clicking on the "Campaigns" link from any myCampaignManager screen brings you to the Campaign List screen.  From this screen you can add and delete campaigns.  Simply click on the "Add New Campaign" link to create a new campaign, or on the "Delete" link next the campaign you wish to delete.
+<br />
+<br />
+
+Clicking on the "Edit" link next to a campaign in the Campaign List screen allows you to edit the content of the campaign, preview the articles, preview the entire campaign, and publish it.  Follow the instructions on the Campaign List screen.
+<br />              <a href="#top">Back to Top</a><br />
+                </td>
+              </tr>
+            </table>
+<br /><br />
+            <a name="34"></a>
+            <table class="tableSubTable" width="100%">
+              <tr>
+
+                <td class="tdArticleTitle">Using Images</td>
+              </tr>
+              <tr>
+                <td class="tdBodyText">
+                  Clicking on the "Images" link from any myCampaignManager screen brings you to the Upload Images screen.  This tool allows you to upload images to the server for inclusion in articles and campaigns.  To add images, click on the "Browse" button within the file upload applet and locate the file(s) you wish to upload. You may select multiple files at once by using holding down the "SHIFT" or "CONTROL" keys while making your selection.  Click on the "Open" button to complete your selection of image files.  Once all the desired files are listed in the applet window, click on the "Upload" button.
+<br />
+<br />
+Note that there are a number of restrictions on uploading files.  
+<br />
+     - Only image files will be accepted by the server.
+
+<br />
+     - Large image files will be resized so that the length of their longest side is 200 pixels.
+<br />
+     - Image files smaller than 200 pixels will not be resized.
+<br />
+     - Images will automatically be removed from the server after three months with no warning.
+<br />
+     - Maximum upload size per click of the "Upload" button is 25 MB.
+<br />
+<br />
+After uploading images, the files will be available to add to articles.  While adding an article, click on the "Insert an Image" button to select an image to include in the article.  Note that a special "tag" will be inserted at the end of the article text (regardless of where in the article text your cursor is).  This tag, if kept intact, may be moved anywhere within the article text.
+<br />              <a href="#top">Back to Top</a><br />
+
+                </td>
+              </tr>
+            </table>
+<br /><br />
+
+<br />
+                </td>
+              </tr>
+            </table>
+          </td>
+
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+  <tr>
+	<td class="tdFooterBar" height="35" width="100%" valign="top">
+	   <table border="0" cellpadding="10" width="100%">
+	     <tr>
+
+	       <td>
+	         <div align="left">
+	           <b>Copyright � 2005 Steven L. Brendtro</b><br />
+
+	         </div>
+	       </td>
+	       <td>
+	         <div align="right">
+	           <i>Website:</i> <a href="http://mycampaign.sourceforge.net" target="_blank">http://mycampaign.sourceforge.net</a><br />
+
+	           <i>Email:</i> admin at imaginerc dot com<br />
+
+	         </div>
+	       </td>
+	     </tr>
+	   </table>
+	</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
